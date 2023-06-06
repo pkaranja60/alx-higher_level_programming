@@ -25,3 +25,4 @@ node = node->next;
 new->next = node->next;
 node->next = new;
 return (new);
+}
