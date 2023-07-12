@@ -1,19 +1,20 @@
 #!/usr/bin/python3
-"""pascal_traigle module."""
+"""pascal_triangle module."""
 
 
 def pascal_triangle(n):
-    """ pascal traigle class body.
+    """Pascal's Triangle of size n.
     """
+    
     if n <= 0:
         return []
 
     triangles = [[1]]
     while len(triangles) != n:
-        tri = triangles[-1]
-        tmp = [1]
-        for i in range(len(tri) - 1):
-            tmp.append(tri[i] + tri[i + 1])
-        tmp.append(1)
-        triangles.append(tmp)
-    return
+        t = triangles[-1]
+        temp = [1]
+        for i in range(len(t) - 1):
+            temp.append(t[i] + t[i + 1])
+        temp.append(1)
+        triangles.append(temp)
+    return triangles
