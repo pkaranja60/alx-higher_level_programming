@@ -1,11 +1,11 @@
 #!/usr/bin/node
 
-const request = require('request');
+const request = require("request");
 
 const url = process.argv[2];
 const out = {};
 
-function count (todo) {
+function count(todo) {
   if (todo.completed) {
     const userId = todo.userId.toString();
     out[userId] = out[userId] + 1 || 1;
